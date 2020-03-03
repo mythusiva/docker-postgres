@@ -1,7 +1,9 @@
 version: "3"
 services:
   database:
-    image: "postgres:9.6.17"
+    image: "postgres:11"
+    ports:
+      - "5432:5432"
     env_file:
       - config.env
     volumes:
