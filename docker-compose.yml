@@ -1,0 +1,10 @@
+version: '3'
+services:
+  database:
+    image: "postgres:9.6.17"
+    env_file:
+      - config.env
+    volumes:
+      - db:/var/lib/postgresql/data/
+volumes:
+  db: 
