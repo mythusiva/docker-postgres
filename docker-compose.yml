@@ -8,3 +8,4 @@ services:
       - config.env
     volumes:
       - ./data:/var/lib/postgresql/data
+    restart: unless-stopped
