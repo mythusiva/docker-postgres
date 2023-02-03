@@ -8,4 +8,11 @@ services:
       - config.env
     volumes:
       - ./data:/var/lib/postgresql/data
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+    mem_limit: 1024m
+    mem_reservation: 512m
+    cpus: 1
     restart: unless-stopped
